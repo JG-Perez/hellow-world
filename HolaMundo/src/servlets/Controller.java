@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class Controller
  */
-@WebServlet("/Controller")
+@WebServlet("/controller")
 public class Controller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -27,7 +27,23 @@ public class Controller extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		String operacion = request.getParameter("operacion");
+		switch(operacion) {
+		case "index":
+			response.sendRedirect("index.jsp");
+			break;
+		case "uno":
+			response.sendRedirect("uno.jsp");
+			//response.getWriter().append("Preparar las acciones de la operacion de inicio: " + operacion);
+			break;
+		case "dos":
+			response.sendRedirect("dos.jsp");
+			//response.getWriter().append("Prepara las acciones de la operacion listar alumnos: " + operacion);
+			break;
+			default:
+				response.getWriter().append("Operacion no permitida o no reconocida");
+		}
+		response.getWriter().append("Hello World Java EE!!");
 	}
 
 	/**

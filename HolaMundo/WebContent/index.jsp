@@ -7,6 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	
+	<a href="controller?operacion=uno">Página 1</a>
+	<a href="controller?operacion=dos">Página 2</a>
 </body>
 </html>

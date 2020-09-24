@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	<a href="controller?operacion=index">Home</a>
 </body>
 </html>
